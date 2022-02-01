@@ -16,7 +16,7 @@ const argv = program.opts();
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case 'list':
-      console.log(db.listContacts())
+      db.listContacts()
       break;
 
       case 'get':
@@ -28,7 +28,7 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case 'remove':
-      console.log('remove')
+      console.log(db.deleteContactById(id))
       break;
 
     default:
